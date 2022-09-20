@@ -1,0 +1,19 @@
+public class Actividad_6 {
+
+    public static void main(String[] args) {
+    estudiante alumno = new estudiante();
+        alumno.nombre = "Alex";
+        alumno.calif[0] = 65;
+        alumno.calif[1] = 65;
+        alumno.calif[2] = 67;
+        alumno.calif[3] = 68;
+        alumno.calif[4] = 65;
+
+        alumno.Promedio();
+        alumno.MetCalificacion();
+
+        alumno.Datos();    
+    
+    }
+    
+}
