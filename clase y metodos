@@ -1,0 +1,57 @@
+class estudiante{
+    String nombre;
+    float calif []= new float[5];
+
+    public double Promedio(){
+      double suma = 0;
+        double promedio = 0;
+
+        for (int x = 0; x < calif.length; x++) {
+            suma = suma + calif[x];
+        }
+
+        promedio = suma/ calif.length;
+
+        return promedio;
+}
+     public String MetCalificacion() {
+
+        String calificacion  =" ";
+
+        if (Promedio() < 50){
+             calificacion = "F";
+        }
+
+        if (Promedio() > 50 || Promedio() < 60){
+            calificacion = "E";
+        }
+
+        if (Promedio() > 60 || Promedio() < 70){
+            calificacion = "D";
+        }
+
+        if (Promedio() > 70 || Promedio() < 80) {
+            calificacion = "C";
+        }
+
+        if (Promedio() > 80 || Promedio() > 90){
+             calificacion = "B";
+         }
+
+        if (Promedio() >90){
+            calificacion = "A";
+        }
+
+        return calificacion;
+}
+      public void Datos(){
+        System.out.println("Nombre del estudiante: " +nombre);
+        System.out.println("Calificacion 1: " +calif[0]);
+        System.out.println("Calificacion 2: " +calif[1]);
+        System.out.println("Calificacion 3: " +calif[2]);
+        System.out.println("Calificacion 4: " +calif[3]);
+        System.out.println("Calificacion 5: " +calif[4]);
+        System.out.println("Promedio: " +Promedio());
+        System.out.println("Calificacion: " +MetCalificacion());
+      }
+}
